@@ -1,0 +1,21 @@
+<dav-button (click)="showModal()" nzType="primary">打开</dav-button>
+<dav-modal
+  [(nzVisible)]="show"
+  nzTitle="增加新大屏"
+  (nzOnCancel)="closeModal()"
+  (nzOnOk)="handleOk()">
+
+  <dav-input
+    value="lalal"
+    [nzRequired]="true"
+    nzLabelName="大屏名称"
+    placeholder="输入大屏名称"
+  >
+  </dav-input>
+  <div class="re-divide-line"></div>
+
+  <p style="color:#fff">111222333</p>
+  <button nz-button nzType="default">Primary</button>
+</dav-modal>
+
+<dav-group-header></dav-group-header>
