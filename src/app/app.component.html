@@ -18,4 +18,49 @@
   <button nz-button nzType="default">Primary</button>
 </dav-modal>
 
-<dav-group-header></dav-group-header>
+<dav-group-header
+  ngTitle="未分組111"
+  [ngShowAll]="showAll"
+  (ngToggle)="toggleShow()"
+>
+</dav-group-header>
+
+<div style="background: transparent;padding:24px;">
+  <div nz-row [nzGutter]="6">
+    <div nz-col [nzSpan]="6" style="margin:16px 0;">
+      <dav-screen-item></dav-screen-item>
+    </div>
+    <div nz-col [nzSpan]="6" style="margin:16px 0;">
+      <nz-card nzTitle="Card title">
+        <p>Card content</p>
+      </nz-card>
+    </div>
+    <div nz-col [nzSpan]="6" style="margin:16px 0;">
+      <nz-card nzTitle="Card title">
+        <p>Card content</p>
+      </nz-card>
+    </div>
+    <div nz-col [nzSpan]="6" style="margin:16px 0;">
+      <nz-card nzTitle="Card title">
+        <p>Card content</p>
+      </nz-card>
+    </div>
+    <div nz-col [nzSpan]="6" style="margin:16px 0;">
+      <nz-card nzTitle="Card title">
+        <p>Card content</p>
+      </nz-card>
+    </div>
+  </div>
+</div>
+
+
+
+
+<dav-group-header
+  ngTitle="未分組222"
+  [ngShowAll]="!showAll2"
+  (ngToggle)="toggleShow2()"
+></dav-group-header>
+
+<p>{{showAll}}</p>
+

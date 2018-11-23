@@ -13,6 +13,7 @@ import zh from '@angular/common/locales/zh';
 import { DavInputComponent } from './dav-input/dav-input.component';
 import { DavModalComponent } from './dav-modal/dav-modal.component';
 import { DavGroupHeaderComponent } from './dav-group-header/dav-group-header.component';
+import { DavScreenItemComponent } from './dav-screen-item/dav-screen-item.component';
 
 registerLocaleData(zh);
 
@@ -22,7 +23,8 @@ registerLocaleData(zh);
     DavButtonComponent,
     DavInputComponent,
     DavModalComponent,
-    DavGroupHeaderComponent
+    DavGroupHeaderComponent,
+    DavScreenItemComponent
   ],
   imports: [
     BrowserModule,

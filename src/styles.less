@@ -7,6 +7,12 @@ body {
   color: #fff;
 }
 
+.ant-card {
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+}
+
 /* 重写弹出框样式-- start */
 
 .re-modal .ant-modal {
@@ -63,3 +69,63 @@ body {
   border-bottom: 1px solid #002753;
 }
 /* 分割线样式-- end */
+
+
+// 大屏预览分块
+
+.dav-screen-item {
+
+  .ant-card-body{
+    display:none;
+  }
+
+  .ant-card-cover{
+    position: relative;
+
+    .dsi-content {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.dav-screen-item-add {
+  .dsi-content-inner{
+    margin-top: 50%;
+    transform: translateY(-100%);
+
+    p {
+      text-align: center;
+
+      &:first-child {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+.dav-screen-item-publish {
+  .dsi-content {
+    background-image: url(assets/img/BG.png);
+    background-size: cover;
+  }
+
+
+  .dsi-content-inner{
+    margin-top: 50%;
+    transform: translateY(-100%);
+
+    p {
+      text-align: center;
+
+      &:first-child {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+

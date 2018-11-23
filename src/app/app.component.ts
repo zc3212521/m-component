@@ -10,6 +10,9 @@ export class AppComponent {
 
   show = false;
 
+  showAll = false;
+  showAll2 = false;
+
   showModal(): void {
     this.show = true;
   }
@@ -23,4 +26,16 @@ export class AppComponent {
     console.log('click ok');
     this.show = false;
   }
+
+  toggleShow(): void {
+    this.showAll = !this.showAll;
+  }
+  toggleShow2(): void {
+    this.showAll2 = !this.showAll2;
+  }
+
+  prient(): void {
+    console.log(666)
+  }
+
 }
