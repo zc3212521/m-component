@@ -1,0 +1,16 @@
+<nz-modal class="re-modal" [(nzVisible)]="nzVisible" [nzFooter]="modalFooter" [nzTitle]="modalTitle" (nzOnCancel)="handleCancel()">
+  <ng-content></ng-content>
+</nz-modal>
+
+<ng-template #modalFooter>
+  <dav-button nzType="default" (click)="handleCancel()" style="margin-right: 10px;">
+    取消
+  </dav-button>
+  <dav-button nzType="primary" (click)="handleOk()">
+    确定
+  </dav-button>
+</ng-template>
+
+<ng-template #modalTitle>
+  <span style="color:#fff">{{nzTitle}}</span>
+</ng-template>

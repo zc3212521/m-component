@@ -1,0 +1,42 @@
+.dav-group-header {
+  //border-bottom: 5px solid transparent;
+  height: 52px;
+  padding: 16px 0;
+  font-size: 14px;
+  //border-image: linear-gradient(to rightm, #0792FF 20%, #0479FF 20%, #0792FF 20%, #0479FF 20%, #0792FF 20%)30 30;
+  border-image: linear-gradient(to right, #0479FF, #0792FF) 30 14 repeat;
+  border-bottom: 1px solid;
+
+  span {
+    display: inline-block;
+  }
+  .dgh-l{
+    position: relative;
+    padding-right: 88px;
+    display: inline-block;
+    color: #0479ff;
+
+    .dgh-l-bg {
+      background: url(../../assets/img/_grouping_left_adorn.png) no-repeat;
+      background-size: 106px 14px;
+      height: 14px;
+      width: 106px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .dgh-r {
+    color: #7f8fa4;
+    cursor: pointer;
+
+    .dgh-r-bg {
+      background: url(../../assets/img/_grouping_right_adorn.png) no-repeat;
+      background-size: 50px 7px;
+      height: 7px;
+      width: 50px;
+    }
+    float: right;
+  }
+}

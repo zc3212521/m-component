@@ -1,0 +1,16 @@
+<div class="dav-group-header">
+  <div class="dgh-l">
+    <span>
+      {{ngTitle}}
+      <span class="dgh-l-bg"></span>
+    </span>
+  </div>
+
+  <div class="dgh-r" (click)="toggleShow()">
+    <span class="dgh-r-bg"></span>
+    <span *ngIf="!ngShowAll">显示部分</span>
+    <span *ngIf="ngShowAll">显示全部</span>
+  </div>
+  <div style="clear:both"></div>
+</div>
+<ng-content></ng-content>
