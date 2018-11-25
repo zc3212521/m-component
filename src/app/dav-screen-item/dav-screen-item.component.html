@@ -18,21 +18,27 @@
   </div>
 </ng-template>
 
+
+
 <nz-card
-  *ngIf="type === 'publish'"
-  class="dav-screen-item dav-screen-item-publish"
+  *ngIf="type === 'publish' || type === 'unpublish'"
+  [ngClass]="{'dav-screen-item dav-screen-pub-common': true, 'dav-screen-item-publish': type == publish, 'dav-screen-item-unpublish': type == 'unpublish'} "
   nzHoverable
+  [ngStyle]="bgObj"
   [nzCover]="publish">
 </nz-card>
 <ng-template #publish>
-  <img src="../../assets/img/hdpi_have.png" alt="">
-  <div class="dsi-content">
-    <div class="dsi-content-inner">
-      <p><i style="font-size: 24px;" class="anticon anticon-plus"></i></p>
-      <p>oooppp</p>
-    </div>
+  <img *ngIf="type === 'publish'" src="../../assets/img/hdpi_have.png" alt="">
+  <img *ngIf="type === 'unpublish'" src="../../assets/img/hdpi_notissue.png" alt="">
+  <div class="dsi-content-bottom">
+    <p>{{ title }}</p>
+    <span  *ngIf="type === 'publish'">已发布</span>
+    <span  *ngIf="type === 'unpublish'" style="color: #ccc;">未发布</span>
   </div>
+
+  <ng-content select=".cover"></ng-content>
 </ng-template>
+
 
 <!--<ng-template #coverTemplate *ngIf="type === 'fabu'">-->
   <!--&lt;!&ndash;<div class="dsi-bg-1"></div>&ndash;&gt;-->

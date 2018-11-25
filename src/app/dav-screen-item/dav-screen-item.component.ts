@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'dav-screen-item',
@@ -8,11 +8,25 @@ import { Component, OnInit } from '@angular/core';
 export class DavScreenItemComponent implements OnInit {
 
 
-  type: string = 'publish'
+  @Input()
+  type: string;
 
-  constructor() { }
+  @Input()
+  title: string;
+
+  @Input()
+  bg: string;
+
+  bgObj: any = {};
+
+  constructor() {
+
+  }
 
   ngOnInit() {
+    this.bgObj = {
+      'background-image': `url(${this.bg})`,
+    };
   }
 
 }

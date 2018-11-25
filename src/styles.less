@@ -75,6 +75,9 @@ body {
 
 .dav-screen-item {
 
+  width:288px;
+  height: 208px;
+
   .ant-card-body{
     display:none;
   }
@@ -107,10 +110,53 @@ body {
   }
 }
 
-.dav-screen-item-publish {
+.dav-screen-pub-common {
+  background-size: 100% 100%;
+
   .dsi-content {
-    background-image: url(assets/img/BG.png);
-    background-size: cover;
+    background-color: transparent;
+  }
+
+  .cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.9);
+    width: 100%;
+    height: 100%;
+    border: 1px solid #005be1;
+    opacity: 0;
+    transition:opacity 0.5s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    i {
+      font-size: 24px;
+      outline: 1px dashed #fff;
+    }
+  }
+
+  .dsi-content-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+
+    p {
+      padding-left: 16px;
+    }
+
+    span {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-size: 12px;
+      padding-right: 25px;
+    }
   }
 
 
@@ -124,6 +170,22 @@ body {
       &:first-child {
         margin-bottom: 16px;
       }
+    }
+  }
+}
+
+.dav-screen-item-publish{
+  .dsi-content-bottom{
+    span{
+      color: #fff;
+    }
+  }
+}
+
+.dav-screen-item-unpublish{
+  .dsi-content-bottom{
+    span{
+      color: #ccc;
     }
   }
 }
