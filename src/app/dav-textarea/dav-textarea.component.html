@@ -1,5 +1,4 @@
 <label *ngIf="hasLabel" style="margin-bottom: 8px;color: #7F8FA4;" [ngClass]="{'ant-form-item-required': nzRequired}">
   {{nzLabelName}}:
 </label>
-<input class="re-input" nz-input [placeholder]="placeholder" [(ngModel)]="value">
-
+<textarea nzAutosize class="re-input" nz-input [placeholder]="placeholder" [(ngModel)]="value"></textarea>

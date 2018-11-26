@@ -14,6 +14,7 @@ import { DavInputComponent } from './dav-input/dav-input.component';
 import { DavModalComponent } from './dav-modal/dav-modal.component';
 import { DavGroupHeaderComponent } from './dav-group-header/dav-group-header.component';
 import { DavScreenItemComponent } from './dav-screen-item/dav-screen-item.component';
+import { DavTextareaComponent } from './dav-textarea/dav-textarea.component';
 
 registerLocaleData(zh);
 
@@ -24,7 +25,8 @@ registerLocaleData(zh);
     DavInputComponent,
     DavModalComponent,
     DavGroupHeaderComponent,
-    DavScreenItemComponent
+    DavScreenItemComponent,
+    DavTextareaComponent
   ],
   imports: [
     BrowserModule,
